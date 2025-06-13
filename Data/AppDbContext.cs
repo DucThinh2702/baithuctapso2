@@ -15,7 +15,8 @@ namespace TrainingSystem.API.Data
         {
             modelBuilder.Entity<ServiceStats>()
                .HasNoKey()
-               .ToView("view_servicestats"); // tên viết thường
+               .ToView("view_servicestats"); 
+
            modelBuilder.Entity<AssignmentUsage>()
                 .HasNoKey()
                 .ToView("view_assignmentusage");

@@ -15,7 +15,6 @@ namespace TrainingSystem.API.Controllers
             _context = context;
         }
 
-        // ➤ View 1: Dịch vụ và số lượng phân công
         [HttpGet("services")]
         public async Task<IActionResult> GetStats()
         {
@@ -23,7 +22,6 @@ namespace TrainingSystem.API.Controllers
             return Ok(result);
         }
 
-        // ➤ View 2: Tổng số phân công theo thiết bị theo tuần/tháng/năm
         [HttpGet("assignment-usage")]
         public async Task<IActionResult> GetAssignmentUsage()
         {
@@ -31,12 +29,12 @@ namespace TrainingSystem.API.Controllers
             return Ok(result);
         }
 
-        // ➤ View 3: Tổng số lượt sử dụng của từng thiết bị
         [HttpGet("device-usage")]
         public async Task<IActionResult> GetDeviceUsage()
         {
             var result = await _context.DeviceAssignmentCount.ToListAsync();
             return Ok(result);
         }
+
     }
 }

@@ -8,7 +8,7 @@ namespace TrainingSystem.API.Models
         public string DeviceCode { get; set; }
 
         [Column("devicename")]
-        public string? DeviceName { get; set; } // 👈 Cho phép null
+        public string? DeviceName { get; set; } 
 
         [Column("totalusages")]
         public int TotalUsages { get; set; }
